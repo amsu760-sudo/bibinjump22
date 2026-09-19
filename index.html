@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bibin Jump — a completely serious aviation simulator." />
+    <title>Bibin Jump</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="brand" id="brandButton" aria-label="Return to the Bibin Jump menu">
+          <span class="brand-mark">BJ</span>
+          <span>BIBIN <em>JUMP</em></span>
+        </button>
+        <span class="header-note">A completely serious aviation simulator</span>
+      </header>
+
+      <main class="layout">
+        <section class="game-card" aria-label="Bibin Jump game">
+          <div class="stage">
+            <div class="stage-topline">
+              <span class="stage-pill" id="stagePill">MENU / flappy protocol</span>
+              <span class="score-readout">
+                <strong id="scoreText">SCORE: 0</strong>
+                <small id="bestHud">BEST: 0</small>
+              </span>
+            </div>
+            <canvas id="gameCanvas" aria-label="Bibin Jump gameplay canvas"></canvas>
+            <div class="screen" id="screen">
+              <div class="screen-card" id="screenCard"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <div class="eyebrow">Pilot dashboard</div>
+            <h2>Statistically concerning</h2>
+            <p>Every pipe is a question. Every flap is a bad decision. Keep the head airborne.</p>
+            <div class="stat-row"><span>Current run</span><strong class="accent" id="currentScore">0</strong></div>
+            <div class="stat-row"><span>Best run</span><strong id="bestScore">0</strong></div>
+            <div class="stat-row"><span>Stage</span><strong id="stageText">BEGINNER</strong></div>
+            <div class="stat-row"><span>Locker</span><strong id="lockerText">LOCKED</strong></div>
+            <div class="journey" id="journey" aria-label="Level progression"></div>
+          </section>
+
+          <section class="panel">
+            <div class="eyebrow">Flight controls</div>
+            <h2>Make the flap</h2>
+            <div class="controls">
+              <div><b>SPC</b><span>Flap upward</span></div>
+              <div><b>UP</b><span>Also flap upward</span></div>
+              <div><b>TAP</b><span>You know what to do</span></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="eyebrow">Locker preview</div>
+            <h2>Private files</h2>
+            <div class="locker" id="locker"></div>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <span>Bibin Jump / plain static edition</span>
+        <span>No birds were trained for this game</span>
+      </footer>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
